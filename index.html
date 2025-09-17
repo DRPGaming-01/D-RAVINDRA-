@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    :root {
+      --accent:#0563af;
+      --muted:#666;
+      --bg:#f7f9fc;
+      --card:#fff;
+      --radius:12px;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { background: var(--bg); color:#1a1a1a; }
+
+    .container { max-width:1000px; margin:28px auto; padding:24px; }
+
+    header { text-align:center; margin-bottom:18px; }
+    header h1 { font-size:28px; }
+
+    .hero { background: var(--card); border-radius:var(--radius); padding:20px;
+      text-align:center; box-shadow:0 6px 20px rgba(16,24,40,0.06); margin-bottom:18px; }
+    .hello { font-weight:700; font-size:20px; margin-bottom:8px; }
+    .one-line { color: var(--muted); margin-bottom:14px; }
+    .view-work { display:inline-block; padding:10px 18px; border-radius:10px;
+      background: linear-gradient(90deg,var(--accent), #0a8bd6); color:white; text-decoration:none; font-weight:600; }
+
+    .section { text-align:center; margin:18px 0; }
+    .section h2 { margin-bottom:14px; font-size:20px; }
+
+    .about-card { background:var(--card); padding:18px; border-radius:12px;
+      display:inline-block; max-width:760px; box-shadow:0 6px 20px rgba(16,24,40,0.06); }
+    .profile-photo { display:block; width:180px; height:180px; object-fit:cover;
+      border-radius:50%; margin:12px auto; border:6px solid rgba(5,99,175,0.15); }
+    .about-text { color:var(--muted); line-height:1.4; margin-top:10px; font-size:15px; }
+
+    .projects-grid { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:10px; }
+    .project { background:var(--card); border-radius:12px; width:calc(50% - 10px);
+      min-width:220px; padding:16px; text-align:center; box-shadow:0 6px 20px rgba(16,24,40,0.05); }
+    .project h3 { margin:6px 0 4px; font-size:16px; }
+
+    .contact-card { background:var(--card); padding:18px; border-radius:12px;
+      box-shadow:0 6px 20px rgba(16,24,40,0.06); max-width:520px; margin:14px auto; }
+    .contact-card label { display:block; font-size:13px; margin:8px 0 6px; color:#222; }
+    .contact-card input, .contact-card textarea { width:100%; padding:10px 12px; border-radius:8px;
+      border:1px solid #e6e9ee; font-size:14px; }
+    .contact-card textarea { min-height:100px; }
+    .send-btn { margin-top:12px; width:100%; padding:10px; border:none; border-radius:8px;
+      background:var(--accent); color:white; font-weight:600; font-size:15px; cursor:pointer; }
+
+    footer { margin-top:32px; text-align:center; padding:20px; background:#eceff4; }
+    footer .topics { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-bottom:10px; }
+    footer .topics span { background:#dfe6ee; padding:6px 12px; border-radius:8px; font-size:13px; color:#333; }
+    footer p { margin:0; font-size:13px; color:var(--muted); }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1>My Portfolio</h1>
+    </header>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hello">Hello!</div>
+      <div class="one-line">I am Ravindra, passionate about coding and technology.</div>
+      <a href="#projects" class="view-work">View My Work</a>
+    </div>
+
+    <!-- About Me -->
+    <div class="section" id="about">
+      <h2>About Me</h2>
+      <div class="about-card">
+        <!-- REPLACE THIS PLACEHOLDER WITH YOUR IMAGE LATER -->
+        <img src="https://via.placeholder.com/180" alt="Ravindra" class="profile-photo">
+        <div class="about-text">
+          I am studying Bachelor of Computer Applications. I enjoy coding, exploring new technologies, and building projects.
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project"><h3>Technical Quiz</h3></div>
+        <div class="project"><h3>My Portfolio</h3></div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="section" id="contact">
+      <h2>Contact Me</h2>
+      <form class="contact-card" onsubmit="sendMessage(event)">
+        <label>Name</label>
+        <input type="text" value="Ravindra" readonly>
+        <label>Email</label>
+        <input type="email" value="24bsca141ravindrad@skacas.ac.in" readonly>
+        <label>Phone</label>
+        <input type="text" value="7806815399" readonly>
+        <label>Message</label>
+        <textarea placeholder="Type your message..."></textarea>
+        <button type="submit" class="send-btn">Send</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="topics">
+        <span>Project Statement</span>
+        <span>Project Overview</span>
+        <span>End Users</span>
+        <span>Tools & Technologies</span>
+        <span>Portfolio Design & Layout</span>
+        <span>Features & Functionality</span>
+        <span>Conclusion</span>
+        <span>GitHub Link</span>
+      </div>
+      <p>Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function sendMessage(e){
+      e.preventDefault();
+      alert("Message sent successfully!");
+    }
+  </script>
+</body>
+</html>
